@@ -25,7 +25,6 @@ async function extractProfile(url: string): Promise<any> {
 async function extractProfilePosts(url: string): Promise<any> {
   const endpoint = "https://api-d7b62b.stack.tryrelevance.com/latest/studios/e61ff6df-f1e8-4622-a0ff-97dac7333c24/trigger_limited";
   const project = "bba15f865414-4f3b-a593-89920096c57c";
-  // Including "limit": 5 in the payload
   const body = {
     params: {
       url: url,
@@ -80,7 +79,7 @@ async function main() {
     posts: limitedPosts
   };
 
-  // Build the prompt to send to GPT‑4.
+  // Prompt to send to GPT‑4.
   const prompt = `
 You are an AI assistant specialized in analyzing social media profiles for personalized sales outreach. The following JSON object contains data scraped from a LinkedIn profile, including the lead's main profile details and the latest posts.
 
@@ -104,11 +103,11 @@ If the provided data is unclear, please state "Not enough data available."
 `.trim();
 
   try {
-    // Call the GPT-4 API (using the OpenAI endpoint as an example).
+    // Call the GPT-4o API
     const openaiResponse = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           { role: "system", content: "You are a helpful AI assistant." },
           { role: "user", content: prompt }
