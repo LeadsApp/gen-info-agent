@@ -95,6 +95,7 @@ Sections:
    - Spot recent activity that suggests sales readiness (e.g., new roles, industry discussions).
 3. Personalization Opportunities
    - Suggest conversation starters based on the lead's interests or recent activity.
+   - Suggest conversation starters based on the lead's latest posts.
    - Recommend specific topics or themes they seem focused on.
 4. Call-to-Action Recommendations
    - Provide low-pressure, clear CTAs based on the lead’s engagement style or activity level.
